@@ -1,7 +1,6 @@
-# testcafe-reporter-reportportal
-[![Build Status](https://travis-ci.org/redfox256/testcafe-reporter-reportportal.svg)](https://travis-ci.org/redfox256/testcafe-reporter-reportportal)
+# testcafe-reporter-liv-report
 
-This is the **reportportal** reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
+This is the reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
 
 
 
@@ -23,15 +22,10 @@ testcafe chrome 'path/to/test/file.js' --reporter liv-report
 - Edit or create the .env file by adding the following required variables:
 
 ```
-REPORT_PORTAL_BASE_URL=http://example.com
-REPORT_PORTAL_TOKEN=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-REPORT_PORTAL_PROJECT_NAME=My_Demo
-# Launch name is optional, if not specified the name will default to the project name
-REPORT_PORTAL_LAUNCH_NAME=The Launch Name
-# Tags are optional, should be separated by coma
-REPORT_PORTAL_TAGS=Tag1, Tag2
-# Description is optional
-REPORT_PORTAL_DESCRIPTION=Run description
+DASHBOARD_URL=http://example.com
+DASHBOARD_TOKEN=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+PROJECT_NAME=My_Demo
+ENVIRONMENT=Env_name
 ```
 
 
@@ -42,6 +36,6 @@ testCafe
     .createRunner()
     .src('path/to/test/file.js')
     .browsers('chrome')
-    .reporter('reportportal') // <-
+    .reporter('liv-report') // <-
     .run();
 ```
