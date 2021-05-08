@@ -1,6 +1,6 @@
 {
   "name": "testcafe-reporter-liv-report",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TestCafe reporter plugin",
   "repository": "https://github.com/aman9922/testcafe-reporter-liv-report",
   "author": {
@@ -36,6 +36,7 @@
     "babel-runtime": "^5.3.0",
     "dotenv": "^6.2.0",
     "envs": "^0.1.6",
+    "form-data": "^4.0.0",
     "reportportal-js-client": "^1.0.2",
     "strip-ansi": "^5.0.0"
   }
