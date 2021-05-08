@@ -6,6 +6,7 @@ const url = process.env.DASHBOARD_URL + '/add';
 
 module.exports = async function (projectName, environment, build, fixtureName, stepName, status, durationMs, screenShotArr, errorArr) {
     // try {
+    console.log('*******************************' + projectName, environment, build, fixtureName, stepName, status, durationMs, screenShotArr, errorArr);
     var bodyFormData = new FormData();
     bodyFormData.append('projectName', projectName);
     bodyFormData.append('environment', environment);
@@ -14,10 +15,10 @@ module.exports = async function (projectName, environment, build, fixtureName, s
     bodyFormData.append('stepName', stepName);
     bodyFormData.append('status', status);
     bodyFormData.append('durationMs', durationMs);
-    bodyFormData.append('screenShotArr', screenShotArr);
-    bodyFormData.append('errorArr', errorArr);
+    bodyFormData.append('screenShotArr', JSON.stringify(screenShotArr));
+    bodyFormData.append('errorArr', JSON.stringify(errorArr));
     console.log(url + '*******************************');
-    console.log('*******************************' + projectName, environment, build, fixtureName, stepName, status, durationMs, screenShotArr, errorArr);
+    //console.log('*******************************' + projectName, environment, build, fixtureName, stepName, status, durationMs, screenShotArr, errorArr);
     // axios.post(url, { 'projectName': projectName, 'environment': environment, 'build': build, 'fixtureName': fixtureName, 'stepName': stepName, 'status': status, 'durationMs': durationMs, 'screenShotArr': screenShotArr, 'errorArr': errorArr, 'tags': tags })
     // .catch(err => console.log('Not able to post test through api', err));
     //     axios.post('http://localhost:5000/posts/add', { 'projectName': projectName, 'environment': environment, 'build': build, 'fixtureName': fixtureName, 'stepName': stepName, 'status': status, 'durationMs': durationMs, 'screenShotArr': screenShotArr, 'errorArr': errorArr })
