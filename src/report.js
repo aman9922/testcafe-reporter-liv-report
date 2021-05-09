@@ -51,7 +51,7 @@ class Report {
         }
 
         await api(this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs, screenShotArr, errorArr);
-        console.log('Log start ###### ' + this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs, screenShotArr, errorArr + ' ########');
+        //console.log('Log start ###### ' + this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs, screenShotArr, errorArr + ' ########');
     }
 
     async finishFixture () {
