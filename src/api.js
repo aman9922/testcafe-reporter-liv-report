@@ -13,7 +13,7 @@ module.exports = async function (projectName, environment, build, fixtureName, s
     }
     catch (error) {
         //console.log(error.message);
-        console.log("Error while calling API");
+        console.log('Error while calling API');
     }
 
 
