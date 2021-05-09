@@ -13,7 +13,7 @@ module.exports = async function (projectName, environment, build, fixtureName, s
             .then(function () {
                 console.log("request sent succesfully");
             })
-            .catch(err => console.log('Not able to post test through api', err));
+            .catch(err => console.log('Not able to post test through api', err.message));
     }
     catch (error) {
         console.log(error.message);
