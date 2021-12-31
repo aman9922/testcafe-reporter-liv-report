@@ -8,8 +8,6 @@ export default function () {
         reportTaskStart (startTime, userAgents, testCount) {
             this.startTime = startTime;
             this.testCount = testCount;
-            if (process.env.DASHBOARD_URL)
-                throw new Error('Please set DASHBOARD_URL...');
             this.write(`Running tests in: ${userAgents}`)
                 .newline();
             testReport.startLaunch(); 
