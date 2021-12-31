@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 //const url = 'http://localhost:5000/posts/add';
-const url = process.env.DASHBOARD_URL + '/add';
+const url = process.env.DASHBOARD_URL + '/posts/add';
 
 module.exports = async function (projectName, environment, build, fixtureName, stepName, status, durationMs, screenShotArr, errorArr) {
     try {
@@ -12,7 +12,7 @@ module.exports = async function (projectName, environment, build, fixtureName, s
        // axios.post('http://localhost:5000/posts/add', { 'projectName': projectName, 'environment': environment, 'build': build, 'fixtureName': fixtureName, 'stepName': stepName, 'status': status, 'durationMs': durationMs, 'screenShotArr': screenShotArr, 'errorArr': errorArr });
         axios({
             method: 'post',
-            url: 'http://localhost:5000/posts/add',
+            url: url,
             data: { 'projectName': projectName, 'environment': environment, 'build': build, 'fixtureName': fixtureName, 'stepName': stepName, 'status': status, 'durationMs': durationMs, 'screenShotArr': screenShotArr, 'errorArr': errorArr },
             maxContentLength: Infinity,
             maxBodyLength: Infinity
