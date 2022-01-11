@@ -15,7 +15,11 @@ module.exports = async function (projectName, environment, build, fixtureName, s
             url: url,
             data: { 'projectName': projectName, 'environment': environment, 'build': build, 'fixtureName': fixtureName, 'stepName': stepName, 'status': status, 'durationMs': durationMs, 'screenShotArr': screenShotArr, 'errorArr': errorArr },
             maxContentLength: Infinity,
-            maxBodyLength: Infinity
+            maxBodyLength: Infinity,
+            headers:{ 
+                'Content-Type': process.env.CONTENTTYPE, 
+                'Authorization': process.env.AUTHORIZATION 
+            }
         });
     }
     catch (error) {
