@@ -23,7 +23,7 @@ module.exports = async function (projectName, environment, build, fixtureName, s
             }
         }).then(function (response) {
             // handle success
-            console.log(response);
+            console.log(JSON.stringify(response));
         });
     }
     catch (error) {
