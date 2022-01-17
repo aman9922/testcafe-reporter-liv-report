@@ -27,7 +27,8 @@ module.exports = async function (projectName, environment, build, fixtureName, s
         maxBodyLength: Infinity,
         headers: {
             'Content-Type': process.env.CONTENTTYPE,
-            'Authorization': process.env.AUTHORIZATION
+            'Authorization': process.env.AUTHORIZATION,
+            'Connection': 'keep-alive'
         }
     })
         .catch(function (error) {
