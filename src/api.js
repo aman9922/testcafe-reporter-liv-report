@@ -29,14 +29,15 @@ module.exports = async function (projectName, environment, build, fixtureName, s
                 'Content-Type': process.env.CONTENTTYPE, 
                 'Authorization': process.env.AUTHORIZATION 
             }
-        }).catch(function (error) {
-            // handle error
-            console.log(error);
         });
+        // .catch(function (error) {
+        //     // handle error
+        //     console.log(error);
+        // });
     }
     catch (error) {
-        //console.log(error.message);
         console.log('Error while calling API');
+        console.log(error.message);
     }
 
 
